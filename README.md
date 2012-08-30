@@ -12,9 +12,9 @@ A sample index.js file is included that will just increment a count by 25 every 
 
 Basic Usage
 -----------
-> var metrics = require('metricsmaw');
-> metricsmaw.init(host,port);
-> metrics.incrementCounter("randomCounter",4); // increases randomCounter by 4
-> metrics.decrementCounter("randomCounter",4); // decurements randomCounter by 4
-> metrics.setGauge("someGauge",17); // sets the specified gauge to the specified value
-> metrics.markMeter("rateMeter",7); // add the amount to the specified meter
+>        var metrics = require('metricsmaw');
+>        metricsmaw.init(host,port);
+>        metrics.incrementCounter("randomCounter",4); // increases randomCounter by 4
+>        metrics.decrementCounter("randomCounter",4); // decrements randomCounter by 4
+>        metrics.setGauge("someGauge",17); // sets the specified gauge to the specified value
+>        metrics.markMeter("rateMeter",7); // add the amount to the specified meter
