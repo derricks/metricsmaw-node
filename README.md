@@ -18,4 +18,3 @@ Basic Usage
 > metrics.decrementCounter("randomCounter",4); // decurements randomCounter by 4
 > metrics.setGauge("someGauge",17); // sets the specified gauge to the specified value
 > metrics.markMeter("rateMeter",7); // add the amount to the specified meter
-
