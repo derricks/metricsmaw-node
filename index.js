@@ -6,5 +6,5 @@ var net = require('net')
 setInterval(
     function() {
         metrics.init("127.0.0.1",18000)
-        metrics.send("node_requests","counter",3);
+        metrics.incrementCounter('node_tests',25);
     },10000);
