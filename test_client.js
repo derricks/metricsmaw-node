@@ -1,7 +1,9 @@
 /** Test program for metricsmaw library. */
 
 var net = require('net')
-  , metrics = require('metricsmaw');
+  , metrics = require('metricsmaw')
+  , util=require('util')
+  ;
 
 setInterval(
     function() {
@@ -11,5 +13,12 @@ setInterval(
     
 setInterval(function() {
      metrics.init("127.0.0.1",18000);
-     var metricNames = metrics.getAllMetricNames(function(err,results) {console.log(results);});
+     
+     metrics.getAllMetricNames(function(err,results) {
+        results.forEach(function(item) {
+            metrics.getMetricDetails(item,function(err,info) {
+                console.log("item %s value %s",item,util.inspect(info,false,null));
+            }); 
+        });
+     });
 },5000);
